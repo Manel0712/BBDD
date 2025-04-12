@@ -8,8 +8,8 @@ ENV MYSQL_USER=user
 ENV MYSQL_PASSWORD=userpassword
 
 # Exponer el puerto de MySQL y el puerto HTTP
-EXPOSE 3306     # Puerto de MySQL
-EXPOSE 80       # Puerto HTTP
+EXPOSE 3306
+EXPOSE 80
 
 # Volumen para persistir datos
 VOLUME /var/lib/mysql
