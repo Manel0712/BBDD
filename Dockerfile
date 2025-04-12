@@ -1,5 +1,6 @@
-# Usar la imagen oficial de MySQL
 FROM mysql:8
 
-# Exponer el puerto 3306 para la base de datos MySQL
+# No definimos MYSQL_ROOT_PASSWORD, por lo que el usuario root no tendrá contraseña
+VOLUME /var/lib/mysql
+
 EXPOSE 3306
