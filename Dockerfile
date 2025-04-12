@@ -12,3 +12,4 @@ VOLUME /var/lib/mysql
 EXPOSE 3306
 
 # No es necesario exponer el puerto 80 para MySQL
+EXPOSE 80
