@@ -8,4 +8,4 @@ ENV MYSQL_DATABASE=example_db
 VOLUME /var/lib/mysql
 
 # Exponer el puerto de MySQL
-EXPOSE 3306
+EXPOSE 8000, 3306
