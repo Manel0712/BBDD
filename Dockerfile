@@ -1,15 +1,18 @@
 # Usar la imagen oficial de MySQL
 FROM mysql:8.4
 
-# Definir las variables de entorno necesarias para inicializar MySQL
-ENV MYSQL_ROOT_PASSWORD="1234"
+# Establecer las variables de entorno para la configuración de MySQL
+# Si no deseas contraseña para root, puedes dejar MYSQL_ROOT_PASSWORD vacío
+ENV MYSQL_ROOT_PASSWORD=rootpassword
 ENV MYSQL_DATABASE=example_db
+ENV MYSQL_USER=user
+ENV MYSQL_PASSWORD=userpassword
 
-# Volumen para persistir los datos de la base de datos
-VOLUME /var/lib/mysql
-
-# Exponer solo el puerto 3306 para MySQL
+# Exponer el puerto de MySQL
 EXPOSE 3306
 
-# No es necesario exponer el puerto 80 para MySQL
-EXPOSE 80
+# Volúmenes para persistir los datos de la base de datos
+VOLUME /var/lib/mysql
+
+# Comando para iniciar MySQL
+CMD ["mysqld"]
