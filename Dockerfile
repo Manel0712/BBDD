@@ -10,4 +10,4 @@ VOLUME /var/lib/mysql
 # Exponer el puerto de MySQL
 EXPOSE 3306
 
-EXPOSE 8000
+EXPOSE 80
