@@ -1,4 +1,4 @@
-FROM mysql:8
+FROM mysql:8.4
 
 # Definir las variables de entorno necesarias para inicializar MySQL
 ENV MYSQL_ROOT_PASSWORD="1234"
